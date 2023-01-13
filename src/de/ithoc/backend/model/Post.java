@@ -1,4 +1,4 @@
-package de.ithoc.webblog.model;
+package de.ithoc.backend.model;
 
 public class Post {
     

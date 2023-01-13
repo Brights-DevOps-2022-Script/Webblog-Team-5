@@ -1,4 +1,4 @@
-package de.ithoc.webblog;
+package de.ithoc.backend;
 
 public class App {
     public static void main(String[] args) throws Exception {

@@ -1,9 +1,9 @@
-package de.ithoc.webblog.persistence;
+package de.ithoc.backend.persistence;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import de.ithoc.webblog.model.Post;
+import de.ithoc.backend.model.Post;
 
 /**
  * Storage to keep the posts with their IDs as key.
