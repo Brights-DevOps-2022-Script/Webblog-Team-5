@@ -1,6 +1,6 @@
 package de.ithoc.backend;
 
-public class App {
+public class Post {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello Webblog");
 
