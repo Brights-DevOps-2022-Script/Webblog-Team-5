@@ -1,4 +1,4 @@
-package Persistence;
+package de.ithoc.Persistence;
 
 public class PersistenceClass {
     
