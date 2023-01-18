@@ -1,5 +1,5 @@
 package de.ithoc.Persistence;
 
-public class PersistenceClass {
+public class DataStorage {
     
 }

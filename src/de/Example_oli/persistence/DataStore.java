@@ -1,7 +1,6 @@
 package de.Example_oli.persistence;
 
 import java.util.HashMap;
-import java.util.Map;
 
 import de.Example_oli.model.Post;
 
@@ -10,7 +9,7 @@ import de.Example_oli.model.Post;
  */
 public class DataStore {
     
-    private Map<Integer, Post> map = new HashMap<>();
+    private HashMap<Integer, Post> map = new HashMap<>();
 
     /* Store last maximum index to ensure IDs are unique. */
     private Integer maxIndex = 0;
