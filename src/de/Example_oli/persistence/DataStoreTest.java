@@ -1,9 +1,9 @@
-package de.ithoc.backend.persistence;
+package de.Example_oli.persistence;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-import de.ithoc.backend.model.Post;
+import de.Example_oli.model.Post;
 
 public class DataStoreTest {
     

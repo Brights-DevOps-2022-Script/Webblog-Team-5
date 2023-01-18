@@ -1,4 +1,4 @@
-package de.ithoc.backend.model;
+package de.Example_oli.model;
 
 public class Post {
     

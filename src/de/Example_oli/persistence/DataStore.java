@@ -1,9 +1,9 @@
-package de.ithoc.backend.persistence;
+package de.Example_oli.persistence;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import de.ithoc.backend.model.Post;
+import de.Example_oli.model.Post;
 
 /**
  * Storage to keep the posts with their IDs as key.
