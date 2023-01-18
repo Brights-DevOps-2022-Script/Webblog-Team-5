@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-    public class AttributeScanner {
-        private String name;
-        private String id;
+    
+    private String name;
+    private String id;
 
     public void scanAttributeName() {
         Scanner scan = new Scanner(System.in);
