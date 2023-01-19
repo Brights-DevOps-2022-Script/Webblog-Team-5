@@ -14,12 +14,20 @@ public class Comment {
 
 // Methods
 
-    public void setId(int commentId){
+    public int setId(int commentId){
+        
         this.commentId = commentId;         // Impelementieren: fortlaufend, also +1
+            
+        if (commentId > 0) {
+            return commentId + setId(commentId -1);
+        } else {
+            return 0;
+        }
     }
 
     public int getId(){
-     return commentId;   
+
+        return commentId;   
     }
 
     public void setText(String text){
