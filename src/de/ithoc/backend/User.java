@@ -12,7 +12,7 @@ public class User {
         this.passwort = passwort;
     }/* */ 
     
-    User user = new User(userName, passwort);
+    //User user = new User(userName, passwort);
 
     public void setUsername(String username) {
         this.userName = username;
@@ -29,15 +29,15 @@ public class User {
     public String getPasswort() {
         return passwort;
     }
-    public void editOwnPost(int noPost, String newContent) {
+    /*public void editOwnPost(int noPost, String newContent) {
         
         Post post = dataStorage.getPost(noPost);
-        if(post.getAuthor().equals(this.username)) {
-            post.methodToChangeTheContent(newContent);
+        if(post.getAuthor().equals(this.userName)) {
+            post.setText(newContent);
             dataStorage.updatePost(post);
         }
 
-    public void editOwnComment(int noComment, String newContent2 )
+    public void editOwnComment(int noComment, String newContent2 )/* */
 
 
     
