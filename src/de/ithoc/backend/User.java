@@ -5,8 +5,14 @@ public class User {
 
     private String userName;
     private String passwort;
+
+     
+    /*public User(String userName, String passwort) {
+        this.userName = userName;
+        this.passwort = passwort;
+    }/* */ 
     
-    User user = new User();
+    User user = new User(userName, passwort);
 
     public void setUsername(String username) {
         this.userName = username;
@@ -23,13 +29,15 @@ public class User {
     public String getPasswort() {
         return passwort;
     }
-    public void editOwnPost(int postId, String newContent) {
+    public void editOwnPost(int noPost, String newContent) {
         
-        Post post = dataStorage.getPost(postId);
+        Post post = dataStorage.getPost(noPost);
         if(post.getAuthor().equals(this.username)) {
             post.methodToChangeTheContent(newContent);
             dataStorage.updatePost(post);
         }
+
+    public void editOwnComment(int noComment, String newContent2 )
 
 
     
