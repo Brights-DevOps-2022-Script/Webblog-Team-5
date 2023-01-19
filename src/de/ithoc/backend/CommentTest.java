@@ -2,7 +2,9 @@ package de.ithoc.backend;
 
 import java.util.Date;
 
-public class Comment {
+import org.junit.Test;
+
+public class CommentTest {
 
 // Attributes
 
@@ -13,8 +15,8 @@ public class Comment {
     private Date date;
 
 // Methods
-
-    public int setId(int commentId){
+@Test
+public int setId(int commentId){
         
         this.commentId = 0;
         
@@ -23,6 +25,11 @@ public class Comment {
         }
          
         return commentId; // Impelementieren: fortlaufend, also +1       
+    }
+
+    public int getId(){
+
+        return commentId;   
     }
 
     public void setText(String text){
@@ -58,3 +65,4 @@ public class Comment {
     }
 
 }
+
