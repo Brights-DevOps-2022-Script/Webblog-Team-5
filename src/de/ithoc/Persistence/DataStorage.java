@@ -45,20 +45,23 @@ public class DataStorage {
     }
 
     public void printUsers(){
+        System.out.println("Users:\n________________");
       for (Map.Entry<String, User> entry : userList.entrySet()){
-        System.out.println("Key(username): " + entry.getKey() + "Value(user): " + entry.getValue());
+        System.out.println("Key(username): " + entry.getKey() + "\nValue(user): " + entry.getValue().toString()+"\n");
       }
     }
 
     public void printPosts(){
+        System.out.println("Posts:\n________________");
         for (Map.Entry<Integer, Post> entry : postList.entrySet()){
-          System.out.println("Key(ID): " + entry.getKey() + "Value(post): " + entry.getValue());
+          System.out.println("Key(ID): " + entry.getKey() + "\nValue(post): " + entry.getValue().toString()+"\n");
         }
       }
 
       public void printAdmins(){
+        System.out.println("Admins:\n________________");
         for (Map.Entry<String, Admin> entry : adminList.entrySet()){
-          System.out.println("Key(username): " + entry.getKey() + "Value(admin): " + entry.getValue());
+          System.out.println("Key(username): " + entry.getKey() + "\nValue(admin): " + entry.getValue().toString()+"\n");
         }
       }
 

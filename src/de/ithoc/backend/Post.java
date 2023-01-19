@@ -64,4 +64,13 @@ public class Post {
         comments.put(maxCommentId, comment);
         return comment;
     }
+
+    public Post(){
+        date = new Date();
+    }
+
+    @Override
+    public String toString() {
+        return "ID=" + postId + ", Date=" + date + ", Title=" + title + ", Author=" + author + ", Text=" + text +", Comments=" +comments;
+    }
 }

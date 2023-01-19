@@ -29,6 +29,11 @@ public class User {
     public String getPasswort() {
         return passwort;
     }
+
+    @Override
+    public String toString() {
+        return "Username=" + userName + ", Password=" + passwort;
+    }
     /*public void editOwnPost(int noPost, String newContent) {
         
         Post post = dataStorage.getPost(noPost);
