@@ -46,19 +46,31 @@ public class DataStorage {
 
     public void printUsers(){
       for (Map.Entry<String, User> entry : userList.entrySet()){
-        System.out.println("Key: " + entry.getKey() + "Value: " + entry.getValue());
+        System.out.println("Key(username): " + entry.getKey() + "Value(user): " + entry.getValue());
       }
     }
 
     public void printPosts(){
         for (Map.Entry<Integer, Post> entry : postList.entrySet()){
-          System.out.println("Key: " + entry.getKey() + "Value: " + entry.getValue());
+          System.out.println("Key(ID): " + entry.getKey() + "Value(post): " + entry.getValue());
         }
       }
 
       public void printAdmins(){
         for (Map.Entry<String, Admin> entry : adminList.entrySet()){
-          System.out.println("Key: " + entry.getKey() + "Value: " + entry.getValue());
+          System.out.println("Key(username): " + entry.getKey() + "Value(admin): " + entry.getValue());
         }
+      }
+
+      public HashMap<Integer, Post> getPostList(){
+        return postList;
+      }
+
+      public HashMap<String, User> getUserList(){
+        return userList;
+      }
+
+      public HashMap<String, Admin> getAdminList(){
+        return adminList;
       }
 }
