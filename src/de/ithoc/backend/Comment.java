@@ -8,7 +8,6 @@ public class Comment {
 
     private Integer commentId;
     private String text;
-    private String title;
     private String author;
     private Date date;
 
@@ -30,14 +29,6 @@ public class Comment {
         return text;
     }
 
-    public void setTitle(String title){
-        this.title=title;
-    }
-
-    public String getTitle(){
-        return title;
-    }
-
     public void setAuthor(String author){
         this.author=author;
     }
@@ -52,6 +43,11 @@ public class Comment {
 
     public Date getDate(){
         return date;
+    }
+
+    @Override
+    public String toString() {
+        return "ID=" + commentId + ", Date=" + date + ", Author=" + author + ", Text=" + text;
     }
 
 }

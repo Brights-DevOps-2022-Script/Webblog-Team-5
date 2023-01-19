@@ -10,7 +10,7 @@ public class Post {
     private String title;
     private String author;
     private Date date;
-    private HashMap<Integer, Comment> comments;
+    private HashMap<Integer, Comment> commentList = new HashMap<>();;
     private Integer maxCommentId=0;
 
     public void setId(Integer postId){
@@ -61,8 +61,12 @@ public class Post {
         }
         maxCommentId++;
         comment.setId(maxCommentId);
-        comments.put(maxCommentId, comment);
+        commentList.put(comment.getId(), comment);
         return comment;
+    }
+
+    public HashMap<Integer, Comment> getCommentList(){
+        return commentList;
     }
 
     public Post(){
@@ -71,6 +75,6 @@ public class Post {
 
     @Override
     public String toString() {
-        return "ID=" + postId + ", Date=" + date + ", Title=" + title + ", Author=" + author + ", Text=" + text +", Comments=" +comments;
+        return "ID=" + postId + ", Date=" + date + ", Title=" + title + ", Author=" + author + ", Text=" + text +", Comments=" +commentList.toString();
     }
 }
