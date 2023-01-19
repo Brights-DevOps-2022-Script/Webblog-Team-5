@@ -6,7 +6,7 @@ public class Comment {
 
 // Attributes
 
-    private int commentId;
+    private Integer commentId;
     private String text;
     private String title;
     private String author;
@@ -14,15 +14,12 @@ public class Comment {
 
 // Methods
 
-    public int setId(int commentId){
-        
-        this.commentId = 0;
-        
-        for (int i=1; i<=50; i++){
-            commentId = commentId + i;
-        }
-         
-        return commentId; // Impelementieren: fortlaufend, also +1       
+    public void setId(Integer commentId){
+        this.commentId = commentId;    
+    }
+
+    public Integer getId(){
+        return commentId;
     }
 
     public void setText(String text){
