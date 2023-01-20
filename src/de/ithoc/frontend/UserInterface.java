@@ -4,8 +4,6 @@ import java.util.Scanner;
 import java.util.Date;
 import java.util.HashMap;
 
-
-
 import de.ithoc.Persistence.DataStorage;
 import de.ithoc.backend.Comment;
 import de.ithoc.backend.Post;
@@ -18,11 +16,11 @@ public class UserInterface {
     private String username;
 
     public void init() {
-        
+
         System.out.println("Hi, welcome to our blog! What would you like to do?");
         int scanned = 0;
         while (scanned != 3) {
-            System.out.println("These are your options:\n1. create new user\n2. login\3. exit");
+            System.out.println("These are your options:\n1. create new user\n2. login n\3. exit");
             scanned = scan.nextInt();
             if (scanned == 1) {
                 newUser();
@@ -33,21 +31,25 @@ public class UserInterface {
     }
 
     public User newUser() {
-        HashMap<String, User> userList = data.getUserList();
-
         System.out.println("Enter your username: ");
         String key = scan.nextLine();
         key = scan.nextLine();
 
-        if (userList.containsKey(key)) {
-            System.out.println("This user already exists. Please log in or choose a different username.");
-        }
-        User user = new User();
-        user.setUsername(key);
         System.out.println("Enter your password: ");
         String pwd = scan.nextLine();
-        // System.out.println("Please enter your password again to confirm: ");
-        // if (...)
+
+        User user = newUserSave(key, pwd);
+        return user;
+    }
+
+    public User newUserSave(String key, String pwd) {
+        HashMap<String, User> userList = data.getUserList();
+        User user = new User();
+        if (userList.containsKey(key)) {
+            System.out.println("This user already exists. Please log in or choose a different username.");
+            return user;
+        }
+        user.setUsername(key);
         user.setPassword(pwd);
         data.saveUser(user);
         return user;
@@ -67,7 +69,7 @@ public class UserInterface {
                 int options = 0;
                 while (options != 8) {
                     System.out.println(
-                            "These are your options:\n1. create post\n2. comment on post\n3. edit post\n4.delete post\n5. edit comment\n 6. delete comment\n7. view users and posts\n8. logout");
+                            "These are your options:\n1. create post\n2. comment on post\n3. edit post\n 4.delete post\n5. edit comment\n6. delete comment\n7. view users and posts\n8. logout");
                     options = scan.nextInt();
                     if (options == 1) {
                         newPost();
@@ -94,7 +96,10 @@ public class UserInterface {
             } else {
                 System.out.println("Sorry, wrong password.");
             }
+        } else {
+            System.out.println("User does not exist!");
         }
+        ;
     }
 
     public void newComment() {
@@ -136,49 +141,51 @@ public class UserInterface {
         System.out.println("These are all available posts. Please enter the ID of the post you would like to edit.");
         Integer id = scan.nextInt();
         Post post = postList.get(id);
-        if (post.getAuthor().equals(username)){
+        if (post.getAuthor().equals(username)) {
             System.out.println(post.getText());
             System.out.println("Enter new post: ");
             post.setText(scan.nextLine());
             return post;
+        } else {
+            System.out.println("You're not the author of this post!");
         }
-        else{System.out.println("You're not the author of this post!");}
         return post;
     }
 
-    public Comment editComment() {
-        data.printPosts();
+    // public Comment editComment() {
+    // data.printPosts();
 
-        System.out.println("Enter the post id: ");
+    // System.out.println("Enter the post id: ");
 
-        Integer postId = scan.nextInt();
+    // Integer postId = scan.nextInt();
 
-        scan.nextLine();
+    // scan.nextLine();
 
-        Post post = data.getPostList().get(postId);
-        HashMap<Integer, Comment> commentList = post.getCommentList();
-        Comment comment =                                                   //hier fehlt was 
+    // Post post = data.getPostList().get(postId);
+    // HashMap<Integer, Comment> commentList = post.getCommentList();
+    // Comment comment = //hier fehlt was
 
-        if (post == null) {
+    // if (post == null) {
 
-            System.out.println("Invalid post id. Please try again.");
+    // System.out.println("Invalid post id. Please try again.");
 
-            return comment;
+    // return comment;
 
-        }
-        
-        System.out.println("These are all available posts. Please enter the ID of the post you would like to edit.");
-        Integer id = scan.nextInt();
-        Post post = postList.get(id);                                   // muss noch bearbeitet werden
-        if (post.getAuthor().equals(username)){
-            System.out.println(post.getText());
-            System.out.println("Enter new post: ");
-            post.setText(scan.nextLine());
-            return post;
-        }
-        else{System.out.println("You're not the author of this post!");}
-        return post;
-    }
+    // }
+
+    // System.out.println("These are all available posts. Please enter the ID of the
+    // post you would like to edit.");
+    // Integer id = scan.nextInt();
+    // Post post = postList.get(id); // muss noch bearbeitet werden
+    // if (post.getAuthor().equals(username)){
+    // System.out.println(post.getText());
+    // System.out.println("Enter new post: ");
+    // post.setText(scan.nextLine());
+    // return post;
+    // }
+    // else{System.out.println("You're not the author of this post!");}
+    // return post;
+    // }
 
     public Post newPost() {
         Post post = new Post();
@@ -191,5 +198,9 @@ public class UserInterface {
 
         data.savePost(post);
         return post;
+    }
+
+    public void deletePost(Post post) {
+
     }
 }
