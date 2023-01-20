@@ -16,11 +16,13 @@ public class UserInterface {
     private String username;
 
     public void init() {
-
+        System.out.println("----------------------");
         System.out.println("Hi, welcome to our blog! What would you like to do?");
+        System.out.println("----------------------");
         int scanned = 0;
         while (scanned != 3) {
             System.out.println("These are your options:\n1. create new user\n2. login \n3. exit");
+            System.out.println("----------------------");
             scanned = scan.nextInt();
             if (scanned == 1) {
                 newUser();
@@ -66,6 +68,7 @@ public class UserInterface {
             String pwd = scan.nextLine();
             if (user.getPasswort().equals(pwd)) {
                 System.out.println("Welcome " + username + " what would you like to do?");
+                System.out.println("----------------------");
                 int options = 0;
                 while (options != 8) {
                     System.out.println(
@@ -93,11 +96,14 @@ public class UserInterface {
                     }
                 }
                 System.out.println("Goodbye!");
+                System.out.println("----------------------");
             } else {
                 System.out.println("Sorry, wrong password.");
+                System.out.println("----------------------");
             }
         } else {
             System.out.println("User does not exist!");
+            System.out.println("----------------------");
         }
         ;
     }
@@ -119,6 +125,7 @@ public class UserInterface {
         if (post == null) {
 
             System.out.println("Invalid post id. Please try again.");
+            System.out.println("----------------------");
 
             return;
 
@@ -139,16 +146,21 @@ public class UserInterface {
     public Post editPost() {
         HashMap<Integer, Post> postList = data.getPostList();
         System.out.println("These are all available posts. Please enter the ID of the post you would like to edit.");
+        System.out.println("----------------------");
         data.printPosts();
         Integer id = scan.nextInt();
         Post post = postList.get(id);
         if (post.getAuthor().equals(username)) {
             System.out.println(post.getText());
             System.out.println("Enter new post: ");
+            scan.nextLine();
             post.setText(scan.nextLine());
+            System.out.println("You successfully changed the post.");
+            System.out.println("----------------------");
             return post;
         } else {
             System.out.println("You're not the author of this post!");
+            System.out.println("----------------------");
         }
         return post;
     }
@@ -198,6 +210,8 @@ public class UserInterface {
         post.setText(scan.nextLine());
 
         data.savePost(post);
+        System.out.println("your post has been saved");
+        System.out.println("----------------------");
         return post;
     }
 
@@ -214,8 +228,10 @@ public class UserInterface {
             if (answer.equals("Y")){
                 postList.remove(id);
                 System.out.println("Your post was deleted.");
+                System.out.println("----------------------");
             }
             else{System.out.println("Your post was not deleted!");
+            System.out.println("----------------------");
             }
         }
     }

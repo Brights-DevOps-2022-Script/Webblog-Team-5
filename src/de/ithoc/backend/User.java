@@ -32,7 +32,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "Username=" + userName + ", Password=" + passwort;
+        return "Username=" + userName + "\nPassword=" + passwort;
     }
     /*public void editOwnPost(int noPost, String newContent) {
         

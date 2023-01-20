@@ -47,7 +47,7 @@ public class Comment {
 
     @Override
     public String toString() {
-        return "ID=" + commentId + ", Date=" + date + ", Author=" + author + ", Text=" + text;
+        return "\nID=" + commentId + "\nDate=" + date + "\nAuthor=" + author + "\nText=" + text;
     }
 
 }

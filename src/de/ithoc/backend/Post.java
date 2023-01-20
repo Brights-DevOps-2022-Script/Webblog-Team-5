@@ -75,6 +75,6 @@ public class Post {
 
     @Override
     public String toString() {
-        return "ID=" + postId + ", Date=" + date + ", Title=" + title + ", Author=" + author + ", Text=" + text +", Comments=" +commentList.toString();
+        return "ID=" + postId + "\nDate=" + date + "\nTitle=" + title + "\nAuthor=" + author + "\nText=" + text +"\nComments=" +commentList.toString();
     }
 }
