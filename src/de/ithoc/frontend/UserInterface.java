@@ -200,7 +200,19 @@ public class UserInterface {
         return post;
     }
 
-    public void deletePost(Post post) {
-
+    public void deletePost() {
+        HashMap<Integer, Post> postList = data.getPostList();
+        System.out.println("These are all available posts. Please enter the ID of the post you would like to delete.");
+        Integer id = scan.nextInt();
+        Post post = postList.get(id);
+        if (post.getAuthor().equals(username)) {
+            System.out.println("Are you sure you want to delete your post?\nY/N");
+            String answer = scan.nextLine();
+            if (answer.equals("Y")){
+                postList.remove(id);
+            }
+            else{System.out.println("Your post was not deleted!");
+            }
+        }
     }
 }
