@@ -5,7 +5,7 @@ wobei am Ende **5 Minuten für Fragen und Unterhaltung** eingeräumt werden soll
 
 Bitte achtet darauf, dass jede und jeder von euch die gleiche Redezeit während der Präsentation bekommt. 
 
-## Umsetzung in Java
+## Umsetzung in Java (Tim)
 
 - Wie seid ihr an die Problemstellung herangegangen?
   - erst viel Planung (1 Tag):
@@ -15,20 +15,20 @@ Bitte achtet darauf, dass jede und jeder von euch die gleiche Redezeit während 
     - Vorgehen nach Scrum
   
 - Wie habt ihr es geschafft, die relativ lockere und offene Formulierung der Anforderungen für euch greifbar zu machen?
-    - Orientierung an realen Beispielen
+  - Orientierung an realen Beispielen
   
 - Welche Hilfsmittel habt ihr gewählt, um eine "gemeinsame Sprache" für euch im Team zu finden?
-    - Diagramme, Trello, Canban-Templet
-    - Viel Diskussion und Austausch
-    - Gemeinsam Methoden formuliert und was diese tun sollen.
-    - Gemeinsam Variable-Namen gefunden, auf die man sich beziehen kann
+  - Diagramme, Trello, Canban-Templet
+  - Viel Diskussion und Austausch
+  - Gemeinsam Methoden formuliert und was diese tun sollen.
+  - Gemeinsam Variable-Namen gefunden, auf die man sich beziehen kann
   
 - Wie seid ihr an die konkreten Objekte mit deren Eigenschaften und Verhalten gekommen? 
-    - Reale Beispiele, Abhängigkeiten aus dem UML-Diagramm
-    - "Wer tut was?"
+  - Reale Beispiele, Abhängigkeiten aus dem UML-Diagramm
+  - "Wer tut was?"
 
 - Wie habt ihr euren Code getestet und sichergestellt, dass alle relevanten Funktionen abgedeckt sind?
-    - manuell getstest nach dem Motto "make it run"
+  - manuell getstest nach dem Motto "make it run"
 - 1 JunitTest für den "NewUser" im Interface
 
 - Auf welches Stück Java-Code seid ihr besonders stolz und warum?
@@ -37,7 +37,7 @@ Bitte achtet darauf, dass jede und jeder von euch die gleiche Redezeit während 
         - man kann sich alles ausgeben lassen, was drin steht
         - Authentifizierung umgesetzt
 
-## Teamwork
+## Teamwork (Halim)
 
 - Wie habt ihr euch im Team organisiert?
   - Entscheidungen gemeinsam treffen bezüglich Design (UML-Diagramm) und Methoden
@@ -55,7 +55,7 @@ Bitte achtet darauf, dass jede und jeder von euch die gleiche Redezeit während 
   - unnötige Kommentare und Diskussionen haben wir ausgelassen
   - wir haben uns gegenseitig gebremst, damit wir uns nicht in details verlieren
 
-## Takeaway und Troubleshooting
+## Takeaway und Troubleshooting (Ulrike)
 
 - Welche Schwierigkeiten habt ihr während der Entwicklung gehabt und wie habt ihr diese gelöst?
   - Viele detailierte Ideen, von denen wir gern alle umgesetzt hätten
