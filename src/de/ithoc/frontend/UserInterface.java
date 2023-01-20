@@ -20,7 +20,7 @@ public class UserInterface {
         System.out.println("Hi, welcome to our blog! What would you like to do?");
         int scanned = 0;
         while (scanned != 3) {
-            System.out.println("These are your options:\n1. create new user\n2. login n\3. exit");
+            System.out.println("These are your options:\n1. create new user\n2. login \n3. exit");
             scanned = scan.nextInt();
             if (scanned == 1) {
                 newUser();
@@ -69,7 +69,7 @@ public class UserInterface {
                 int options = 0;
                 while (options != 8) {
                     System.out.println(
-                            "These are your options:\n1. create post\n2. comment on post\n3. edit post\n 4.delete post\n5. edit comment\n6. delete comment\n7. view users and posts\n8. logout");
+                            "These are your options:\n1. create post\n2. comment on post\n3. edit post\n4. delete post\n5. edit comment\n6. delete comment\n7. view users and posts\n8. logout");
                     options = scan.nextInt();
                     if (options == 1) {
                         newPost();
@@ -78,9 +78,9 @@ public class UserInterface {
                     } else if (options == 3) {
                         editPost();
                     }
-                    // else if (options == 4){
-                    // deletePost();
-                    // }
+                    else if (options == 4){
+                    deletePost();
+                    }
                     // else if (options == 5){
                     // editComment();
                     // }
@@ -139,6 +139,7 @@ public class UserInterface {
     public Post editPost() {
         HashMap<Integer, Post> postList = data.getPostList();
         System.out.println("These are all available posts. Please enter the ID of the post you would like to edit.");
+        data.printPosts();
         Integer id = scan.nextInt();
         Post post = postList.get(id);
         if (post.getAuthor().equals(username)) {
@@ -200,7 +201,22 @@ public class UserInterface {
         return post;
     }
 
-    public void deletePost(Post post) {
-
+    public void deletePost() {
+        HashMap<Integer, Post> postList = data.getPostList();
+        System.out.println("These are all available posts. Please enter the ID of the post you would like to delete.");
+        data.printPosts();
+        Integer id = scan.nextInt();
+        Post post = postList.get(id);
+        if (post.getAuthor().equals(username)) {
+            System.out.println("Are you sure you want to delete your post?\nY/N");
+            String answer = scan.nextLine();
+            answer = scan.nextLine();
+            if (answer.equals("Y")){
+                postList.remove(id);
+                System.out.println("Your post was deleted.");
+            }
+            else{System.out.println("Your post was not deleted!");
+            }
+        }
     }
 }
