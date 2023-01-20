@@ -4,6 +4,8 @@ import java.util.Scanner;
 import java.util.Date;
 import java.util.HashMap;
 
+
+
 import de.ithoc.Persistence.DataStorage;
 import de.ithoc.backend.Comment;
 import de.ithoc.backend.Post;
@@ -16,6 +18,7 @@ public class UserInterface {
     private String username;
 
     public void init() {
+        
         System.out.println("Hi, welcome to our blog! What would you like to do?");
         int scanned = 0;
         while (scanned != 3) {

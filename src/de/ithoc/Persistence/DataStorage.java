@@ -35,14 +35,14 @@ public class DataStorage {
         return user;
     }
 
-    public User saveAdmin(Admin admin){
-        if (adminList.containsKey(admin.getUsername())){
-            return admin;
-        }
-        adminList.put(admin.getUsername(), admin);
+    // public User saveAdmin(Admin admin){
+    //     if (adminList.containsKey(admin.getUsername())){
+    //         return admin;
+    //     }
+    //     adminList.put(admin.getUsername(), admin);
         
-        return admin;
-    }
+    //     return admin;
+    // }
 
     public void printUsers(){
         System.out.println("Users:\n________________");
