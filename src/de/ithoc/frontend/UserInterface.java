@@ -157,7 +157,7 @@ public class UserInterface {
 
         Post post = data.getPostList().get(postId);
         HashMap<Integer, Comment> commentList = post.getCommentList();
-        Comment comment = 
+        Comment comment =                                                   //hier fehlt was 
 
         if (post == null) {
 
@@ -169,7 +169,7 @@ public class UserInterface {
         
         System.out.println("These are all available posts. Please enter the ID of the post you would like to edit.");
         Integer id = scan.nextInt();
-        Post post = postList.get(id);
+        Post post = postList.get(id);                                   // muss noch bearbeitet werden
         if (post.getAuthor().equals(username)){
             System.out.println(post.getText());
             System.out.println("Enter new post: ");
